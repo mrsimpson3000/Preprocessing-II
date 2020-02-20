@@ -2,9 +2,28 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 4%;
   max-width: 800px;
   margin: 0 auto;
+
+  h1 {
+    @media @mobile {
+      padding: 15px 0;
+    }
+  }
+
+  nav {
+    @media @mobile {
+      padding-bottom: 7px;
+      width: 100%;
+    }
+  }
+
+  @media @mobile {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 4%;
+  }
 }
 
 .dashed-line {
@@ -16,6 +35,8 @@ header {
 }
 
 .home {
+  padding: 0 4%;
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -25,15 +46,35 @@ header {
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+      }
+
       img {
         border-radius: 10px;
+        align-self: center;
+
+        @media @mobile {
+          width: 100%;
+          padding: 0;
+        }
       }
+    }
+
+    @media @mobile {
+      flex-direction: column;
     }
   }
 
