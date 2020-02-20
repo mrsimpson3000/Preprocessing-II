@@ -92,6 +92,10 @@ header {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -100,12 +104,21 @@ header {
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -118,13 +131,28 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0 10%;
+      }
     }
   }
 
   .btn {
     .custom-btn(@eastern-blue, 200px, @white);
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 } // home
